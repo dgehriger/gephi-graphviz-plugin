@@ -131,6 +131,7 @@ public class GraphvizLayout extends AbstractLayout implements Layout {
         cmd.add("-Tdot");
         final ProcessBuilder pb = new ProcessBuilder(cmd);
 
+
         try {
             dotprocess = pb.start();
             try (OutputStream out = dotprocess.getOutputStream();
@@ -265,7 +266,7 @@ public class GraphvizLayout extends AbstractLayout implements Layout {
                 entireOutput.append("\n");
             }
             
-            final String regex = "^\\s*(?<nodeid>\\S+)\\s+\\[[^\\]]*?[, ]?pos=\"(?<pos>[^\"]+?)\".*?\\]";
+	    final String regex = "^\\s*\"(?<nodeid>\\S+)\"\\s+\\[[^\\]]*?[, ]?pos=\"(?<pos>[^\"]+?)\".*?\\]";
             final Pattern pat = Pattern.compile(regex, Pattern.MULTILINE | Pattern.CASE_INSENSITIVE | Pattern.DOTALL);
             Matcher matcher = pat.matcher(entireOutput.toString());
             while(matcher.find()) {

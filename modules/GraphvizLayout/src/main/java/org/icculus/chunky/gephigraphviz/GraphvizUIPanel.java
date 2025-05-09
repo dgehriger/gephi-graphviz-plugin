@@ -87,7 +87,7 @@ public class GraphvizUIPanel extends javax.swing.JPanel {
         gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 5);
         add(jLabel1, gridBagConstraints);
 
-        algoCombo.setModel(new javax.swing.DefaultComboBoxModel<String>(new String[] { "dot", "sfdp", "fdp", "neato", "twopi", "osage", "circo", "patchwork", "nop" }));
+        algoCombo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "dot", "sfdp", "fdp", "neato", "twopi", "osage", "circo", "patchwork", "nop" }));
         algoCombo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 algoComboActionPerformed(evt);
@@ -222,7 +222,7 @@ public class GraphvizUIPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_dotBinaryKeyReleased
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> algoCombo;
+    private javax.swing.JComboBox algoCombo;
     private javax.swing.JCheckBox concentrateCheck;
     private javax.swing.JTextField dotBinary;
     private javax.swing.JButton jButton1;
